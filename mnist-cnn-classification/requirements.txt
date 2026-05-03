@@ -1,6 +1,9 @@
-# tensorflow-cpu: same API, works on Windows/Linux (Streamlit Cloud is Linux).
-# On Python 3.13+, use `pip install -U tensorflow` if this pin blocks resolution.
+# Local training + optional Keras inference
 tensorflow-cpu>=2.15.0,<2.19.0
 streamlit>=1.28.0
 numpy>=1.24.0
 Pillow>=10.0.0
+# ONNX path (Streamlit Cloud / Python 3.14+); export: python -m model.export_onnx
+onnxruntime>=1.18.0
+tf2onnx>=1.16.0
+onnx>=1.14.0

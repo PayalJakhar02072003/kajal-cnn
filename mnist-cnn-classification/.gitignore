@@ -5,6 +5,8 @@ venv/
 .env
 saved_model/*.h5
 saved_model/*.keras
-# Keep this file for Streamlit Cloud (un-ignore after the ignore rules above)
+saved_model/*.onnx
+# Ship these for deploy / reproducibility
 !saved_model/mnist_cnn.keras
+!saved_model/mnist_cnn.onnx
 .streamlit/secrets.toml

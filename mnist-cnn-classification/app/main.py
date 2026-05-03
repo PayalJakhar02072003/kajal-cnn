@@ -6,6 +6,7 @@ PowerShell (from folder `mnist-cnn-classification`):
   .\\.venv\\Scripts\\Activate.ps1
   pip install -r requirements.txt
   python -m model.train
+  python -m model.export_onnx
   streamlit run app/main.py
 """
 
@@ -25,7 +26,7 @@ from app.components.dataset_tab import render_dataset_tab
 from app.components.upload_tab import render_upload_tab
 from app.utils.model_cache import load_mnist_model
 
-MODEL_PATH = _ROOT / "saved_model" / "mnist_cnn.keras"
+SAVED_MODEL_DIR = _ROOT / "saved_model"
 
 
 def main() -> None:
@@ -40,11 +41,12 @@ def main() -> None:
         "(60k train / 10k test). Deploy with **Streamlit**."
     )
 
-    model = load_mnist_model(str(MODEL_PATH))
+    model = load_mnist_model(str(SAVED_MODEL_DIR))
     if model is None:
         st.error(
-            f"No weights found at `{MODEL_PATH}`. "
-            "Train first: `python -m model.train`"
+            f"No model in `{SAVED_MODEL_DIR}`.\n\n"
+            "For **Streamlit Cloud**, commit **`mnist_cnn.onnx`** (export after training).\n"
+            "Locally: `python -m model.train` then `python -m model.export_onnx`."
         )
         st.stop()
 

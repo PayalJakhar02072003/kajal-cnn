@@ -46,6 +46,8 @@ def main() -> None:
     path = out_dir / "mnist_cnn.keras"
     model.save(path)
     print(f"Saved model to {path}")
+    print("For Streamlit Cloud (no TensorFlow at runtime), export ONNX:")
+    print("  python -m model.export_onnx")
 
 
 if __name__ == "__main__":
