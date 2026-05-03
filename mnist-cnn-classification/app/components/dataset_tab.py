@@ -6,7 +6,7 @@ import numpy as np
 import streamlit as st
 
 from app.utils.mnist_data import load_mnist_test
-from model.architecture import normalize_images
+from model.preprocess import normalize_images
 
 
 def render_dataset_tab(model) -> None:

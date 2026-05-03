@@ -7,7 +7,7 @@ import streamlit as st
 from PIL import Image
 
 from app.utils.digit_likelihood import digit_likelihood_assessment, softmax_entropy
-from model.architecture import preprocess_pil_grayscale
+from model.preprocess import preprocess_pil_grayscale
 
 
 def render_upload_tab(model) -> None:

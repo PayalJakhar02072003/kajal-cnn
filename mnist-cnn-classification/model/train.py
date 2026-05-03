@@ -19,7 +19,8 @@ if str(ROOT) not in sys.path:
 
 from tensorflow import keras
 
-from model.architecture import build_model, normalize_images
+from model.architecture import build_model
+from model.preprocess import normalize_images
 
 
 def main() -> None:
