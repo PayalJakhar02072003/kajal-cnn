@@ -1,7 +1,7 @@
 """
 Export ``saved_model/mnist_cnn.keras`` → ``saved_model/mnist_cnn.onnx`` for Streamlit Cloud.
 
-Requires: ``pip install tf2onnx onnx`` (TensorFlow only for this one-off export.)
+Requires: ``pip install -r requirements-dev.txt`` (TensorFlow + tf2onnx for export.)
 
 PowerShell:
   cd mnist-cnn-classification

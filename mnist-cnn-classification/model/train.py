@@ -3,6 +3,7 @@ Train the MNIST CNN and save weights to saved_model/mnist_cnn.keras
 
 PowerShell:
   cd mnist-cnn-classification
+  pip install -r requirements-dev.txt
   python -m model.train
 """
 
@@ -46,7 +47,7 @@ def main() -> None:
     path = out_dir / "mnist_cnn.keras"
     model.save(path)
     print(f"Saved model to {path}")
-    print("For Streamlit Cloud (no TensorFlow at runtime), export ONNX:")
+    print("Export ONNX for Cloud (needs tf2onnx; install: pip install -r requirements-dev.txt):")
     print("  python -m model.export_onnx")
 
 

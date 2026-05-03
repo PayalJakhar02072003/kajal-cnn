@@ -5,6 +5,7 @@ PowerShell (from folder `mnist-cnn-classification`):
   python -m venv .venv
   .\\.venv\\Scripts\\Activate.ps1
   pip install -r requirements.txt
+  pip install -r requirements-dev.txt
   python -m model.train
   python -m model.export_onnx
   streamlit run app/main.py
