@@ -1,0 +1,6 @@
+# Root file: Streamlit Cloud always pip-installs from repo root.
+# Use tensorflow-cpu (Linux-friendly, smaller than full tensorflow wheel).
+tensorflow-cpu>=2.15.0,<2.19.0
+streamlit>=1.28.0
+numpy>=1.24.0
+Pillow>=10.0.0
