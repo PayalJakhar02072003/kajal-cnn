@@ -1,0 +1,5 @@
+# Streamlit Cloud reads this FIRST (same folder as main.py).
+# No TensorFlow — Python 3.14 has no TF wheels. Inference uses ../saved_model/mnist_cnn.onnx
+onnxruntime>=1.18.0
+numpy>=1.24.0
+Pillow>=10.0.0

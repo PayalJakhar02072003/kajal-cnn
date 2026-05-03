@@ -1,6 +1,5 @@
-# Streamlit Community Cloud: Streamlit is already installed in the runtime.
-# Listing streamlit here often causes pip to fight those deps and exit non-zero.
-# Use Python 3.11 in the app’s Advanced settings (TF wheels are reliable there).
-
-tensorflow-cpu==2.16.2
-Pillow>=10.0.0,<12.0.0
+# Streamlit Community Cloud (Python 3.14+): TensorFlow has no wheels there yet.
+# The app loads saved_model/mnist_cnn.onnx with onnxruntime — no TensorFlow at runtime.
+onnxruntime>=1.18.0
+numpy>=1.24.0
+Pillow>=10.0.0
