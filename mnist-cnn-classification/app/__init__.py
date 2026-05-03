@@ -1,0 +1,1 @@
+"""Streamlit MNIST demo."""

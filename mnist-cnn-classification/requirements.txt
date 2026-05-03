@@ -1,0 +1,5 @@
+# Use TF 2.20+ on Python 3.13; 2.15–2.18 works on Python 3.9–3.12
+tensorflow>=2.15.0
+streamlit>=1.28.0
+numpy>=1.24.0
+Pillow>=10.0.0
